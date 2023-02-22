@@ -53,7 +53,6 @@ async function question1() {
     });
 
     return handleAnswer(answers.question_1 == 'One person');
-    return handleAnswer(answers.question_1);
 }
 
 async function question2() {
@@ -68,7 +67,6 @@ async function question2() {
     });
 
     return handleAnswer(answers.question_2 == 'Dumb');
-    return handleAnswer(answers.question_2);
 }
 
 async function question3() {
@@ -86,7 +84,22 @@ async function question3() {
     });
 
     return handleAnswer(answers.question_3 == '10 days');
-    return handleAnswer(answers.question_3);
+}
+
+async function question4() {
+    const answers = await inquirer.prompt({
+        name: 'question_4',
+        type: 'list',
+        message: 'Do you think this game is fun?\n',
+        choices: [
+            'Yea.',
+            'Kinda.',
+            'Maybe.',
+            'Nah.', 
+        ],
+    });
+
+    return handleAnswer(answers.question_4 == 'Yea.');
 }
 
 async function handleAnswer(isCorrect) {
@@ -115,4 +128,5 @@ await askName();
 await question1();
 await question2();
 await question3();
+await question4();
 await winnerwinnerchickendinner();
