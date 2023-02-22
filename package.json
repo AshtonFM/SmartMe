@@ -1,6 +1,6 @@
 {
   "name": "smartme",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -9,6 +9,13 @@
   },
   "author": "Ashton",
   "license": "ISC",
+  "keywords": [
+    "game",
+    "commandline",
+    "cli",
+    "fun",
+    "cligame"
+  ],
   "bin": "./index.js",
   "dependencies": {
     "chalk": "^5.2.0",
